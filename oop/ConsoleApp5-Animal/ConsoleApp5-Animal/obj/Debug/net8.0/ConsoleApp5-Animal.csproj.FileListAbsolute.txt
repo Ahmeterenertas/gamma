@@ -1,0 +1,14 @@
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\bin\Debug\net8.0\ConsoleApp5-Animal.exe
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\bin\Debug\net8.0\ConsoleApp5-Animal.deps.json
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\bin\Debug\net8.0\ConsoleApp5-Animal.runtimeconfig.json
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\bin\Debug\net8.0\ConsoleApp5-Animal.dll
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\bin\Debug\net8.0\ConsoleApp5-Animal.pdb
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.GeneratedMSBuildEditorConfig.editorconfig
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.AssemblyInfoInputs.cache
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.AssemblyInfo.cs
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.csproj.CoreCompileInputs.cache
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.dll
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\refint\ConsoleApp5-Animal.dll
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.pdb
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ConsoleApp5-Animal.genruntimeconfig.cache
+C:\gamma\OOP\ConsoleApp5-Animal\ConsoleApp5-Animal\obj\Debug\net8.0\ref\ConsoleApp5-Animal.dll

@@ -2,11 +2,13 @@
 
 ConsoleApp's(1-2-3-4): Just someting about BIOSNAME, Computer and Employee subjects that we do together in school.
 
+ConsoleApp5-Animal= Using Linq and heritance I did a class for Animals, I categorized as a species and I take results about averages cost, total cost and more.
+
 1to10 = Generates a sequence of numbers from 1 to 10 with alternating signs (positive/negative).
 
 leibvseuler = Compares the accuracy of the Leibniz and Euler methods for approximating the value of Pi by calculating and displaying their deviations from the real value.
 
-leibnround = Approximates Pi using the Leibniz series and displays the result with specific rounding precision.
+PiLeib_Round = Approximates Pi using the Leibniz series and displays the result with specific rounding precision.
 
 leibvseuler = Compares the accuracy of Leibniz and Euler algorithms in approximating the value of Pi.
 
@@ -32,3 +34,5 @@ computer = Simulates a computer network using inheritance to manage different de
 primes1 = Checks numbers from 1 to 20 and prints all prime numbers using a basic primality test function.
 
 primes2 = Counts how many prime numbers exist between 1 and 1000 using the same primality checking logic.
+
+
