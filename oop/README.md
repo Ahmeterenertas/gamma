@@ -10,8 +10,6 @@ leibvseuler = Compares the accuracy of the Leibniz and Euler methods for approxi
 
 PiLeib_Round = Approximates Pi using the Leibniz series and displays the result with specific rounding precision.
 
-leibvseuler = Compares the accuracy of Leibniz and Euler algorithms in approximating the value of Pi.
-
 factorial = Calculates the factorial of a number using both for and while loops.
 
 Fibonacci = Fibonacci = Generates and prints the Fibonacci sequence starting from 1 and continues until the values reach 1000 using a while loop.
