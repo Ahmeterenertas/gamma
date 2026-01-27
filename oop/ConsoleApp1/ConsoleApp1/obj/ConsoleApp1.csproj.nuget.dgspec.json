@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\gamma\\oop\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
+    "C:\\gamma\\OOP\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {}
   },
   "projects": {
-    "C:\\gamma\\oop\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
+    "C:\\gamma\\OOP\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\gamma\\oop\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectUniqueName": "C:\\gamma\\OOP\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "projectName": "ConsoleApp1",
-        "projectPath": "C:\\gamma\\oop\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
+        "projectPath": "C:\\gamma\\OOP\\ConsoleApp1\\ConsoleApp1\\ConsoleApp1.csproj",
         "packagesPath": "C:\\Users\\ahmet\\.nuget\\packages\\",
         "outputPath": "C:\\gamma\\oop\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",

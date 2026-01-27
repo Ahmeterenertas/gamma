@@ -1,29 +1,34 @@
-using System;
+"Object Orianted Programming"
 
-class GuessGameRandomNumber
-{
-	static void Main()
-	{
-		Random rnd = new Random();
-		int sayi = rnd.Next(1, 21);
-		int a = 0;
-		int tahminsayisi = 0;
+ConsoleApp's(1-2-3-4): Just someting about BIOSNAME, Computer and Employee subjects that we do together in school.
 
-		while (a != sayi)
-		{
-			Console.Write("Guess (1-20): ");
-			a = int.Parse(Console.ReadLine());
+1to10 = Generates a sequence of numbers from 1 to 10 with alternating signs (positive/negative).
 
-			if (a < sayi)
-				Console.WriteLine("Try Bigger");
-				tahminsayisi++;
-			
-			if (a > sayi)
-				Console.WriteLine("Try Smaller");
-				tahminsayisi++;
-			if (a == sayi)
-				Console.WriteLine("TRUE!");
-		}
-		Console.WriteLine("Game Over, YOU WON \n You Tried " + tahminsayisi);
-	}
-}
+leibvseuler = Compares the accuracy of the Leibniz and Euler methods for approximating the value of Pi by calculating and displaying their deviations from the real value.
+
+leibnround = Approximates Pi using the Leibniz series and displays the result with specific rounding precision.
+
+leibvseuler = Compares the accuracy of Leibniz and Euler algorithms in approximating the value of Pi.
+
+factorial = Calculates the factorial of a number using both for and while loops.
+
+Fibonacci = Fibonacci = Generates and prints the Fibonacci sequence starting from 1 and continues until the values reach 1000 using a while loop.
+
+
+GuessGame = Implements a "Guess the Number" game with directional feedback (too big/too small) and an attempt counter.
+
+RectanTriangle = Checks if three side lengths form a valid triangle and determines if it is a right-angled triangle.
+
+
+Employee = Demonstrates inheritance and polymorphism by managing employees and managers with custom salary raise logic.
+
+
+Student = Manages a list of students with randomly assigned grades, calculates total/average/best scores, and displays the data sorted by default order, alphabetically, and by descending grade.
+
+StudentWithLinq = Utilizes LINQ queries, delegates, and lambda expressions to manage, filter, and analyze student data dynamically.
+
+computer = Simulates a computer network using inheritance to manage different device types and test connectivity via ping.
+
+primes1 = Checks numbers from 1 to 20 and prints all prime numbers using a basic primality test function.
+
+primes2 = Counts how many prime numbers exist between 1 and 1000 using the same primality checking logic.
