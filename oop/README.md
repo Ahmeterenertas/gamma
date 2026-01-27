@@ -2,7 +2,7 @@
 
 ConsoleApp's(1-2-3-4): Just someting about BIOSNAME, Computer and Employee subjects that we do together in school.
 
-ConsoleApp5-Animal= Using Linq and heritance I did a class for Animals, I categorized as a species and I take results about averages cost, total cost and more.
+ConsoleApp5-Animal = Using LINQ and inheritance, I created classes for animals, grouped them by species, calculated total and average costs, and included a special walk cost for dogs.
 
 1to10 = Generates a sequence of numbers from 1 to 10 with alternating signs (positive/negative).
 

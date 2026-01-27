@@ -22,7 +22,7 @@ namespace AnimalClassProgram
         }
     }
 
-    // Species (ara class)
+    // Species (Little class)
     public class Species : Animal
     {
         public string Breed { get; set; }
@@ -34,7 +34,7 @@ namespace AnimalClassProgram
         }
     }
 
-    // Dog class (SADECE köpeklerde ekstra maliyet var)
+    // Dog class (Extra Cost For Walk)
     public class Dog : Species
     {
         public decimal WalkCost { get; set; }
