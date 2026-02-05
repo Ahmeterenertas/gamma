@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,6 +16,7 @@ namespace AnimalClassProgram
             Cost = cost;
         }
 
+        // Virtual method for polymorphism
         public virtual decimal HowMuch()
         {
             return Cost;
@@ -45,7 +46,8 @@ namespace AnimalClassProgram
             WalkCost = walkCost;
         }
 
-        public decimal TotalCost()
+        // Override HowMuch method for polymorphism
+        public override decimal HowMuch()
         {
             return Cost + WalkCost;
         }
@@ -59,9 +61,10 @@ namespace AnimalClassProgram
         {
         }
 
-        public decimal TotalCost()
+        // Override HowMuch method for polymorphism
+        public override decimal HowMuch()
         {
-            return Cost;
+            return Cost * 1.1m; // Cats have 10% VAT
         }
     }
 
@@ -73,9 +76,10 @@ namespace AnimalClassProgram
         {
         }
 
-        public decimal TotalCost()
+        // Override HowMuch method for polymorphism
+        public override decimal HowMuch()
         {
-            return Cost;
+            return Cost * 1.5m; // Elephants have special handling cost
         }
     }
 
@@ -87,9 +91,10 @@ namespace AnimalClassProgram
         {
         }
 
-        public decimal TotalCost()
+        // Override HowMuch method for polymorphism
+        public override decimal HowMuch()
         {
-            return Cost;
+            return Cost * 2.0m; // Lions are dangerous, double the cost
         }
     }
 
@@ -102,53 +107,68 @@ namespace AnimalClassProgram
                 new Dog("Patrick", "German Shepherd", 200, 30),
                 new Dog("Max", "Labrador", 180, 20),
                 new Dog("Buddy", "Kangal", 160, 25),
-
                 new Cat("Luna", "Van Cat", 150),
                 new Cat("Milo", "British Shorthair", 140),
                 new Cat("Nala", "Siamese", 130),
+                new Elephant("Dumbo", "African", 1000),
+                new Lion("Simba", "African", 800)
             };
 
-            decimal averageDogTotalCost = animals
-                .OfType<Dog>()
-                .Average(d => d.TotalCost());
+            // POLYMORPHISM EXAMPLE 1: Same method, different behavior
+            Console.WriteLine("=== POLYMORPHISM DEMONSTRATION ===");
+            foreach (var animal in animals)
+            {
+                // Each animal type calculates its cost differently
+                Console.WriteLine($"{animal.GetType().Name}: {animal.Name} - Total Cost: {animal.HowMuch()}");
+            }
+            Console.WriteLine();
 
-            decimal averageCatTotalCost = animals
+            // POLYMORPHISM EXAMPLE 2: Calculating averages using polymorphism
+            decimal averageDogCost = animals
+                .OfType<Dog>()
+                .Average(d => d.HowMuch());
+
+            decimal averageCatCost = animals
                 .OfType<Cat>()
-                .Average(c => c.TotalCost());
+                .Average(c => c.HowMuch());
 
-            decimal averageDogWalkCost = animals
-                .OfType<Dog>()
-                .Average(d => d.WalkCost);
+            // POLYMORPHISM EXAMPLE 3: Calculating total using base class method
+            decimal totalCostOfAllAnimals = animals.Sum(a => a.HowMuch());
 
-            decimal totalCostOfAllAnimals = animals.Sum(a =>
+            // POLYMORPHISM EXAMPLE 4: Grouping by type
+            Console.WriteLine("=== DETAILED ANIMAL REPORT ===");
+            var animalGroups = animals.GroupBy(a => a.GetType().Name);
+
+            foreach (var group in animalGroups)
             {
-                if (a is Dog d) return d.TotalCost();
-                if (a is Cat c) return c.TotalCost();
-                return a.HowMuch();
-            });
-
-            Console.WriteLine("Dogs:");
-            foreach (var dog in animals.OfType<Dog>())
-            {
-                Console.WriteLine(
-                    $"Name: {dog.Name}, Breed: {dog.Breed}, Base Cost: {dog.Cost}, Walk Cost: {dog.WalkCost}, Total Cost: {dog.TotalCost()}"
-                );
+                Console.WriteLine($"\n{group.Key}s:");
+                foreach (var animal in group)
+                {
+                    Console.WriteLine($"  Name: {animal.Name}, Breed: {(animal as Species)?.Breed}, Base Cost: {animal.Cost}, Total: {animal.HowMuch()}");
+                }
+                Console.WriteLine($"  Average Cost for {group.Key}: {group.Average(a => a.HowMuch()):F2}");
             }
 
-            Console.WriteLine();
-            Console.WriteLine("Cats:");
-            foreach (var cat in animals.OfType<Cat>())
+            // POLYMORPHISM EXAMPLE 5: Finding expensive animals
+            Console.WriteLine("\n=== EXPENSIVE ANIMALS (Cost > 300) ===");
+            var expensiveAnimals = animals.Where(a => a.HowMuch() > 300);
+            foreach (var animal in expensiveAnimals)
             {
-                Console.WriteLine(
-                    $"Name: {cat.Name}, Breed: {cat.Breed}, Cost: {cat.Cost}"
-                );
+                Console.WriteLine($"{animal.GetType().Name}: {animal.Name} - ${animal.HowMuch()}");
             }
 
-            Console.WriteLine();
-            Console.WriteLine($"Average Dog Total Cost: {averageDogTotalCost}");
-            Console.WriteLine($"Average Dog Walk Cost: {averageDogWalkCost}");
-            Console.WriteLine($"Average Cat Total Cost: {averageCatTotalCost}");
-            Console.WriteLine($"Total Cost of All Animals: {totalCostOfAllAnimals}");
+            Console.WriteLine("\n=== SUMMARY ===");
+            Console.WriteLine($"Average Dog Cost: {averageDogCost:F2}");
+            Console.WriteLine($"Average Cat Cost: {averageCatCost:F2}");
+            Console.WriteLine($"Total Cost of All Animals: {totalCostOfAllAnimals:F2}");
+
+            // POLYMORPHISM EXAMPLE 6: Using base class reference
+            Console.WriteLine("\n=== ANIMAL COST COMPARISON ===");
+            Animal cheapest = animals.OrderBy(a => a.HowMuch()).First();
+            Animal mostExpensive = animals.OrderByDescending(a => a.HowMuch()).First();
+
+            Console.WriteLine($"Cheapest: {cheapest.GetType().Name} {cheapest.Name} - ${cheapest.HowMuch()}");
+            Console.WriteLine($"Most Expensive: {mostExpensive.GetType().Name} {mostExpensive.Name} - ${mostExpensive.HowMuch()}");
         }
     }
 }
